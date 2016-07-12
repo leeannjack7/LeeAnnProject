@@ -2,83 +2,186 @@
  * Not required
  */
 
+
 html, body, .container {
   height: 100%;
 }
 
 /* Reset */
-html, body, h1, p, a, div, section {
+html, body, h1, a, div, section {
   margin: 0;
   padding: 0;
   font-size: 100%;
   font: inherit;
+
 }
 
+
+.map {
+  height: 50%;
+
+
+}
+
+
+p{
+padding-left: 2rem;
+padding-right: 30rem;
+}
+
+
+
+
+html{
+  font-size: 16px;
+}
 /* Basic */
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+
+nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  font-family: 'Oswald', sans-serif;
+  color: fff;
+  font-size: 0.5rem;
+  line-height: 4rem;
+  height: 40px;
+}
+
+
+nav ul li a {
+  text-decoration:none;
+  padding:5px 0;
+  width:100px;
+  color:#eee;
+  float:left;
+  text-align:center;
+  border-left:1px solid #fff;
+}
+
+nav {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  /*transition: .3s background-color;*/
+  background-color: #363b3e;
+}
+
+
+@media screen and (min-width: 600px) {
+  nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+
+  /* Option 1 - Display Inline */
+  nav li {
+    display: inline-block;
+    margin-right: -4px;
+}
+
+li {
+    float: left;
+    width: 25%;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a:hover:not(.active) {
+    color: #979c9f;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
 
 h1 {
-  color: #efecec;
+  color: #7d7f80;
   text-transform: uppercase;
-  font-size: 4em;
-  line-height: 6em;
+  font-size: 2rem;
+  line-height: 3rem;
   font-weight: 100;
-  margin-top: 4em;
+  margin-top: 1rem;
 }
 
 h2 {
-  color: #f60e4f;
+  color: #7d7f80;
   text-transform: uppercase;
-  font-size: 3px;
-  line-height: 50px;
+  font-size: 1rem;
+  line-height: 1rem;
   font-weight: 400;
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
 
 h3 {
-  color: #efecec;
+  color: #7d7f80;
   text-transform: uppercase;
-  font-size: 2em;
-  line-height: 3em;
-  font-weight: 300em;
-  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 300rem;
+  margin-top: 2rem;
+  padding-left: 3rem;
+
 }
 
-body {
-  font: 2em "Cantarell", sans-serif;
-  color: #000000;
-}
-
-para {
-  color: #efecec;
-  font-size: 2em;
-  line-height: 4em;
+h4{
+  color: #7d7f80;
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 2rem;
   font-weight: 100;
-  margin-top: 4em;
-}
-br{
-  margin-top: 10000em;
-
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  margin-top: 1rem;
+  padding-left: 3rem;
 }
 
 
+p {
+  color: #7d7f80;
+  font-size: 1rem;
+  font-weight: 100;
+   padding-left: 3rem;
+}
 
 
 
+h5 {
+  color: #7d7f80;
+  font-size: 1rem;
+  font-weight: 100;
+   padding-left: 3rem;
+  padding-bottom: 3rem;
+}
 
 
 
-
-
-
+/*
 a {
   color: #ffffff;
-}
+}*/
 
 p {
   margin: 0 0 15px 0;
@@ -111,13 +214,7 @@ blockquote cite {
 
 /* Layout */
 
-.navbar {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  height: 40px;
-  z-index: 9999;
-  position: fixed;
-}
+
 
   .inner {
     position: relative;
@@ -125,16 +222,7 @@ blockquote cite {
     text-align: center;
   }
 
-.navbar a {
-  display: inline-block;
-  border: 1px solid #fff;
-  font-size: 14px;
-  line-height: 24px;
-  border-radius: 3px;
-  padding: 2px 15px;
-  text-decoration: none;
-  margin-top: 5px;
-}
+
 
 .container {
   display: table;
@@ -231,4 +319,62 @@ blockquote cite {
   html, body, .container {
     height: auto;
   }
+
+body {
+  /* Location of the image */
+  background-image: url(coverphoto.jpg);
+
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+
+  /* Makes the image fixed in the viewport so that it doesn't move when
+     the content height is greater than the image height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color:#464646;
+
+  /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+    background-image: url(images/background-photo-mobile-devices.jpg);
+  }
+  }
+
+
+
+container {
+  width: 538px;
+}
+section,
+aside {
+  margin: 10px;
+}
+section {
+  float: left;
+  width: 340px;
+}
+aside {
+  float: right;
+  width: 158px;
+
+
+
+
+
+
+
 }
